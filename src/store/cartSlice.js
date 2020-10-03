@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { IndexKind } from "typescript";
 import shoes from "../shoes.json"
 
 export const cartSlice = createSlice({
@@ -16,12 +15,14 @@ export const cartSlice = createSlice({
                 if (shoe[0] === action.payload) {
                     addedItem = shoe[1];
                 }
+                return addedItem;
             });
             let existedItem = false;
             state.products.map((shoe, i) => {
                 if (shoe.id === action.payload) {
                     existedItem = true;
                 }
+                return existedItem;
             });
             if (existedItem) {
                 state.products.map((shoe, i) => {
@@ -31,6 +32,7 @@ export const cartSlice = createSlice({
                         addedItem = shoe;
                         index = i;
                     }
+                    return addedItem;
                 });
                 addedItem = {
                     ...addedItem,

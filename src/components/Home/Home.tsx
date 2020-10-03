@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import {useDispatch} from "react-redux"
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Card, CardActionArea, CardActions, CardContent, CardMedia, Button, Typography } from "@material-ui/core";

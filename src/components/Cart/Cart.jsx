@@ -1,5 +1,4 @@
-import React, { useContext, useEffect } from "react";
-// import { GlobalContext } from "../../context/GlobalState";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Grid, Card, CardActionArea, CardActions, CardContent, CardMedia, Button, Typography } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
